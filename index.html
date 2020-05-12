@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="selector">
+            <button class="btn" id="english">Imperial English</button>
+            <button class="btn" id="metric">Metric</button>
+        </div>
+        <div class="content">
+            <h2>BMI Calculator</h2>
+            <!-- Metric form -->
+            <form id="metric-form">
+                <div class="form-group">
+                    <label>Height in (cm)</label>
+                    <input type="number" id="height-input-cm" step=".01">
+                </div>
+                <div class="form-group">
+                    <label>Weight in (kg)</label>
+                    <input type="number" id="weight-input-kg" step=".01">
+                </div>
+                <!-- display error -->
+                <div class="met-error">
+
+                </div>
+                <div class="btn-div">
+                    <input type="submit" value="Calculate" class="btn">
+                </div>
+            </form>
+            <!-- Imperial English form -->
+            <form id="english-form">
+                <div class="form-group">
+                    <label>Height in (in)</label>
+                    <input type="number" id="height-input-in" step=".01">
+                </div>
+                <div class="form-group">
+                    <label>Weight in (lbs)</label>
+                    <input type="number" id="weight-input-lbs" step=".01">
+                </div>
+                <!-- display error -->
+                <div class="eng-error">
+
+                </div>
+                <div class="btn-div">
+                    <input type="submit" value="Calculate" class="btn">
+                </div>
+            </form>
+            <!-- loader -->
+            <div class="img-div">
+                <img src="img/loading.gif" alt="loading">
+            </div>
+            <!-- display result -->
+            <div id="result">
+
+            </div>
+
+            <!-- Guides -->
+            <div class="guides">
+                <h3>BMI Weight Guide</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BMI</th>
+                            <th>Weight Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>below 18.5</td>
+                            <td class="underweight">underweight</td>
+                        </tr>
+                        <tr>
+                            <td>18.5 - 24.9</td>
+                            <td class="normal">normal</td>
+                        </tr>
+                        <tr>
+                            <td>25.0 - 29.9</td>
+                            <td class="overweight">overweight</td>
+                        </tr>
+                        <tr>
+                            <td>30.0 and up</td>
+                            <td class="overweight">very overweight</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; michicko 2020.
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
